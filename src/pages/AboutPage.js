@@ -10,6 +10,10 @@ const PageContainer = styled.div`
   color: #fff;
 `;
 
+const LogoImage = styled.img`
+  width: 200px; /* Adjust the width as needed */
+`;
+
 const AboutPage = () => {
   return (
     <PageContainer>
@@ -20,11 +24,12 @@ const AboutPage = () => {
         </p>
         <h2>Our Team</h2>
         <ul>
-          <li>John Doe - Lead Developer</li>
-          <li>Jane Smith - Machine Learning Engineer</li>
-          <li>Michael Johnson - UI/UX Designer</li>
+          <li>Param researched the problem, gathered the data sources, and built the data pipeline</li>
+          <li>Eli trained and fine-tuned the detection model</li>
+          <li>Flavien built the front-end so we could share our work with the world​. </li>
         </ul>
       </div>
+      <LogoImage src="/sign_shakti_logo_transparent.png" alt="Project Logo" />
     </PageContainer>
   );
 };

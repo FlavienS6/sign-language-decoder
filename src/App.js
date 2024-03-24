@@ -21,7 +21,10 @@ const StyledButton = styled.button`
     background-color: #0056b3;
   }
 `;
-
+const LogoImageSmall = styled.img`
+  width: 50px; 
+  margin-right: 10px; 
+`;
 const NavContainer = styled.nav`
   background-color: #333;
   padding: 1px;
@@ -34,6 +37,7 @@ const App = () => {
     <Router>
       <div>
         <NavContainer>
+        <LogoImageSmall src="\sign_shakti_logo_transparent.png" alt="Small Logo" />
           <Routes>
             <Route
               path="/about"

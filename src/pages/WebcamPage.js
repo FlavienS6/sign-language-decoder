@@ -6,14 +6,14 @@ import * as tf from '@tensorflow/tfjs';
 const HeaderContainer = styled.div`
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 `;
 
 const HeaderTitle = styled.h1`
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const HeaderSubtitle = styled.p`
@@ -40,8 +40,7 @@ const WebcamPage = () => {
 
   useEffect(() => {
     const loadModel = async () => {
-      const modelUrl = 'https://tfhub.dev/google/imagenet/mobilenet_v2_140_224/classification/2';
-      const loadedModel = await tf.loadGraphModel(modelUrl, { fromTFHub: true });
+      const loadedModel = await tf.loadGraphModel("/model.json");
       setModel(loadedModel);
     };
 
@@ -145,8 +144,8 @@ const WebcamPage = () => {
   return (
     <PageContainer>
       <HeaderContainer>
-        <HeaderTitle>Sign Language Recognition</HeaderTitle>
-        <HeaderSubtitle>Bridging the communication gap with technology</HeaderSubtitle>
+          <HeaderTitle>Sign Language Recognition</HeaderTitle>
+          <HeaderSubtitle>Bridging the communication gap with technology</HeaderSubtitle>
       </HeaderContainer>
       <WebcamContainer>
         <Webcam
@@ -166,6 +165,7 @@ const WebcamPage = () => {
         {renderBoundingBoxes()}
       </WebcamContainer>
     </PageContainer>
+
   );
 };
 
